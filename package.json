@@ -1,7 +1,7 @@
 {
   "name": "wanna_match",
   "version": "1.0.0",
-  "main": "expo/app.json",
+  "main": "expo/AppEntry.js",
   "type": "module",
   "scripts": {
     "start": "expo start",
