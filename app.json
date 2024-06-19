@@ -1,0 +1,12 @@
+{
+  "expo": {
+    "extra": {
+      "eas": {
+        "projectId": "004c3d96-dc06-43d8-b76d-f8533054d125"
+      }
+    },
+    "ios": {
+      "bundleIdentifier": "com.kakubakudan.wannamatch"
+    }
+  }
+}
