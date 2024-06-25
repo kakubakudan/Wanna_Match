@@ -2,7 +2,7 @@
   "name": "wanna_match",
   "version": "1.0.0",
   "main": "expo/AppEntry.js",
-  "type": "module",
+  "type": "commonjs",
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
@@ -24,7 +24,9 @@
     "react-native-screens": "3.31.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0"
+    "@babel/core": "^7.24.7",
+    "@babel/preset-env": "^7.24.7",
+    "babel-jest": "^29.7.0"
   },
   "private": true
 }
