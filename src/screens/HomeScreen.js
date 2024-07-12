@@ -1,3 +1,4 @@
+// HomeScreen.js
 import React from 'react';
 import { View, Text, Button, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 
@@ -25,7 +26,7 @@ const HomeScreen = ({ navigation }) => {
         </View>
 
         {/* Matchボタン */}
-        <TouchableOpacity style={styles.matchButton} onPress={() => alert('Match button pressed')}>
+        <TouchableOpacity style={styles.matchButton} onPress={() => navigation.navigate('Match')}>
           <Text style={styles.matchButtonText}>Match</Text>
         </TouchableOpacity>
 
@@ -58,13 +59,6 @@ const HomeScreen = ({ navigation }) => {
           </View>
         </View>
       </ScrollView>
-
-      {/* ナビゲーションバー */}
-      <View style={styles.navBar}>
-        <Button title="Filter" onPress={() => alert('Filter button pressed')} />
-        <Button title="M" onPress={() => alert('M button pressed')} />
-        <Button title="Profile" onPress={() => alert('Profile button pressed')} />
-      </View>
     </View>
   );
 };
@@ -171,19 +165,6 @@ const styles = StyleSheet.create({
   },
   cartButtonText: {
     fontSize: 24,
-  },
-  navBar: {
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
-    right: 0,
-    height: 60,
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    alignItems: 'center',
-    backgroundColor: '#D3D3D3', // 灰色
-    borderTopWidth: 1,
-    borderColor: '#DDD',
   },
 });
 
