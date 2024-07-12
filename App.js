@@ -7,6 +7,7 @@ import HomeScreen from './src/screens/HomeScreen';
 import MatchScreen from './src/screens/MatchScreen';
 import MatchHistoryScreen from './src/screens/MatchHistoryScreen';
 import ProfileScreen from './src/screens/ProfileScreen'; // プロファイル画面も追加
+import PostScreen from './src/screens/PostScreen';
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -25,8 +26,10 @@ export default function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator>
+        <Tab.Screen name="Post" component={PostScreen} />
         <Tab.Screen name="Home" component={HomeStack} />
         <Tab.Screen name="Profile" component={ProfileScreen} />
+        <Tab.Screen name="Group" component={GroupScreen} />
       </Tab.Navigator>
     </NavigationContainer>
   );
