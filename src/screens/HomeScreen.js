@@ -20,6 +20,7 @@ const HomeScreen = ({ navigation }) => {
         <View style={styles.pointContainer}>
           <Text style={styles.pointTitle}>ポイント</Text>
           <View style={styles.pointBox}>
+          <Text style={styles.pointTitle}>ポイント</Text>
             <Text style={styles.pointValue}>100P</Text>
             <Text style={styles.pointEquivalent}>0.00円相当</Text>
           </View>
@@ -71,18 +72,19 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     alignItems: 'center',
     padding: 20,
-    paddingBottom: 80, // ナビゲーションバーのスペースを確保
+    paddingBottom: 10, // ナビゲーションバーのスペースを確保
+    paddingTop: 0,
   },
   header: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     width: '100%',
-    paddingHorizontal: 20,
-    marginBottom: 20,
-    marginTop: 10, // アイコンを少し下に配置するためにマージンを追加
+    borderRadius: 10,
+    backgroundColor: '#4e4e4e',
+    
   },
   headerButton: {
-    padding: 10,
+    contentOffset: 20,
   },
   headerButtonText: {
     fontSize: 24,
@@ -93,7 +95,7 @@ const styles = StyleSheet.create({
     width: '100%',
   },
   pointTitle: {
-    fontSize: 18,
+    fontSize: 22,
     fontWeight: 'bold',
     marginBottom: 10,
   },
@@ -102,6 +104,8 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#DDD',
     padding: 20,
+    borderRadius: 20,
+    backgroundColor: '#c7c7c7',
     alignItems: 'center',
   },
   pointValue: {
@@ -113,14 +117,14 @@ const styles = StyleSheet.create({
   },
   matchButton: {
     backgroundColor: '#6200EE',
-    paddingVertical: 15,
-    paddingHorizontal: 60,
-    borderRadius: 25,
-    marginVertical: 20,
+    paddingVertical: 30,
+    paddingHorizontal: 120,
+    borderRadius: 50,
+    marginVertical: 0,
   },
   matchButtonText: {
     color: '#FFF',
-    fontSize: 18,
+    fontSize: 30,
     fontWeight: 'bold',
   },
   historyContainer: {
@@ -139,6 +143,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: '#DDD',
     padding: 10,
+    borderRadius: 10,
     marginBottom: 10,
   },
   shopContainer: {
