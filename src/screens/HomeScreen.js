@@ -27,7 +27,7 @@ const HomeScreen = ({ navigation }) => {
         </View>
 
         {/* Matchボタン */}
-        <TouchableOpacity style={styles.matchButton} onPress={() => navigation.navigate('Match')}>
+        <TouchableOpacity style={styles.matchButton} onPress={() => navigation.navigate('MatchScreen')}>
           <Text style={styles.matchButtonText}>Match</Text>
         </TouchableOpacity>
 
@@ -46,7 +46,7 @@ const HomeScreen = ({ navigation }) => {
               <Text>Item Eight</Text>
             </ScrollView>
           </View>
-          <Button title="履歴を見る" onPress={() => navigation.navigate('MatchHistory')} />
+          <Button title="履歴を見る" onPress={() => navigation.navigate('MatchHistoryScreen')} />
         </View>
 
         {/* ショップ枠 */}

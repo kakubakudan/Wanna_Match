@@ -7,6 +7,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import HomeScreen from './src/screens/HomeScreen';
 import ProfileScreen from './src/screens/ProfileScreen';
 import MatchScreen from './src/screens/MatchScreen'; 
+
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
 
@@ -22,15 +23,6 @@ const ScreenB = () => (
   </View>
 );
 
-const HomeStack = () => (
-  <Stack.Navigator screenOptions={{ headerShown: false }}>
-    <Stack.Screen name="HomeScreen" component={HomeScreen} />
-    <Stack.Screen name="ScreenA" component={ScreenA} />
-    <Stack.Screen name="ScreenB" component={ScreenB} />
-    <Stack.Screen name="Match" component={MatchScreen} />
-  </Stack.Navigator>
-);
-
 const CustomTabBar = ({ state, descriptors, navigation }) => {
   const [pressCount, setPressCount] = useState(0);
 
@@ -42,14 +34,6 @@ const CustomTabBar = ({ state, descriptors, navigation }) => {
       return newCount;
     });
   }, [navigation]);
-
-  useEffect(() => {
-    // 状態をレンダリング後に更新
-    if (pressCount > 0) {
-      const routeName = pressCount % 2 === 0 ? 'ScreenA' : 'ScreenB';
-      navigation.navigate(routeName);
-    }
-  }, [pressCount, navigation]);
 
   return (
     <View style={styles.tabBar}>
@@ -117,7 +101,9 @@ export default function App() {
   return (
     <NavigationContainer>
       <Tab.Navigator tabBar={props => <CustomTabBar {...props} />}>
-      <Tab.Screen name="Home" component={HomeStack} />
+        <Tab.Screen name="Home" component={HomeScreen} />
+        <Tab.Screen name="ScreenA" component={ScreenA} />
+        <Tab.Screen name="ScreenB" component={ScreenB} />
         <Tab.Screen name="Profile" component={ProfileScreen} />
       </Tab.Navigator>
     </NavigationContainer>
