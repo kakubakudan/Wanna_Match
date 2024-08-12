@@ -6,7 +6,6 @@ import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import HomeScreen from './src/screens/HomeScreen';
 import ProfileScreen from './src/screens/ProfileScreen';
-import MatchScreen from './src/screens/MatchScreen'; 
 
 const Stack = createStackNavigator();
 const Tab = createBottomTabNavigator();
