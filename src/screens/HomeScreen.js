@@ -11,10 +11,12 @@ const HomeScreen = ({ navigation }) => {
           <TouchableOpacity style={styles.headerButton} onPress={() => alert('Help button pressed')}>
             <Text style={styles.headerButtonText}>?</Text>
           </TouchableOpacity>
-          <TouchableOpacity style={styles.headerButton} onPress={() => alert('Notification button pressed')}>
-            <Text style={styles.headerButtonText}>🔔</Text>
+          <TouchableOpacity style={[styles.headerButton, { marginLeft: 20 }]} onPress={() => alert('Notification button pressed')}>
+              <Text style={styles.headerButtonText}>🔔</Text>
           </TouchableOpacity>
         </View>
+
+        
 
         {/* ポイント表示 */}
         <View style={styles.pointContainer}>
