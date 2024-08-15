@@ -80,13 +80,15 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
     justifyContent: 'space-between',
+    alignItems: 'center',  // 垂直方向に中央揃え
     width: '100%',
     borderRadius: 10,
     backgroundColor: '#4e4e4e',
-    
+    paddingHorizontal: 10, // 左右にパディングを追加
   },
   headerButton: {
-    contentOffset: 20,
+    // contentOffsetを削除
+    padding: 10,  // ボタン自体にパディングを追加して押しやすく
   },
   headerButtonText: {
     fontSize: 24,
