@@ -6,7 +6,7 @@ const MatchHistoryScreen = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Match History Screen</Text>
-      {/* マッチ履歴画面の内容をここに追加 */}
+      
     </View>
   );
 };

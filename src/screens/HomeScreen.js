@@ -9,12 +9,17 @@ const HomeScreen = ({ navigation }) => {
         {/* ヘッダーボタン */}
         <View style={styles.header}>
           <TouchableOpacity style={styles.headerButton} onPress={() => alert('Help button pressed')}>
-            <Text style={styles.headerButtonText}>?</Text>
-          </TouchableOpacity>
-          <TouchableOpacity style={[styles.headerButton, { marginLeft: 20 }]} onPress={() => alert('Notification button pressed')}>
-              <Text style={styles.headerButtonText}>🔔</Text>
-          </TouchableOpacity>
-        </View>
+           <View style={styles.iconBackground}>
+             <Text style={styles.headerButtonText}>?</Text>
+           </View>
+         </TouchableOpacity>
+         <TouchableOpacity style={styles.headerButton} onPress={() => alert('Notification button pressed')}>
+           <View style={styles.iconBackground}>
+             <Text style={styles.headerButtonText}>🔔</Text>
+           </View>
+         </TouchableOpacity>
+       </View>
+
 
         
 
@@ -29,8 +34,8 @@ const HomeScreen = ({ navigation }) => {
         </View>
 
         {/* Matchボタン */}
-        <TouchableOpacity style={styles.matchButton} onPress={() => navigation.navigate('MatchScreen')}>
-          <Text style={styles.matchButtonText}>Match</Text>
+        <TouchableOpacity style={styles.MatchButton} onPress={() => navigation.navigate('MatchScreen')}>
+          <Text style={styles.MatchButtonText}>Match</Text>
         </TouchableOpacity>
 
         {/* マッチ履歴 */}
@@ -80,15 +85,17 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    alignItems: 'center',  // 垂直方向に中央揃え
+    alignItems: 'center',
     width: '100%',
-    borderRadius: 10,
-    backgroundColor: '#4e4e4e',
-    paddingHorizontal: 10, // 左右にパディングを追加
+    paddingHorizontal: 10,
   },
   headerButton: {
-    // contentOffsetを削除
-    padding: 10,  // ボタン自体にパディングを追加して押しやすく
+    // 必要に応じて調整
+  },
+  iconBackground: {
+    borderRadius: 5,
+    padding: 1, 
+    borderRadius: 50,// アイコンの周りにパディングを追加
   },
   headerButtonText: {
     fontSize: 24,
@@ -119,14 +126,14 @@ const styles = StyleSheet.create({
   pointEquivalent: {
     fontSize: 16,
   },
-  matchButton: {
+  MatchButton: {
     backgroundColor: '#6200EE',
     paddingVertical: 30,
     paddingHorizontal: 120,
     borderRadius: 50,
     marginVertical: 0,
   },
-  matchButtonText: {
+  MatchButtonText: {
     color: '#FFF',
     fontSize: 30,
     fontWeight: 'bold',
@@ -145,7 +152,7 @@ const styles = StyleSheet.create({
     maxHeight: 150, // 必要に応じて高さを調整
     width: '100%',
     borderWidth: 1,
-    borderColor: '#DDD',
+    borderColor: '#ddd',
     padding: 10,
     borderRadius: 10,
     marginBottom: 10,
